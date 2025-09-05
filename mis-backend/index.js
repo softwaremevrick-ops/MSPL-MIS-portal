@@ -10,10 +10,10 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/activities', require('./routes/activities'));
-app.use('/api/inventory', require('./routes/inventory'));
-app.use('/api/users', require('./routes/users'));
+app.use('/auth', require('./routes/auth'));
+app.use('/activities', require('./routes/activities'));
+app.use('/inventory', require('./routes/inventory'));
+app.use('/users', require('./routes/users'));
 
 // Basic Error Handling Middleware
 app.use((err, req, res, next) => {
